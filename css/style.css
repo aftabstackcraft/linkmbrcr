@@ -223,23 +223,34 @@ button {
 .brand-mark {
   display: inline-flex;
   align-items: center;
-  gap: 11px;
+  gap: 12px;
   color: var(--charcoal);
   font-weight: 800;
   line-height: 1;
   white-space: nowrap;
 }
 
-.brand-symbol {
-  display: inline-grid;
-  place-items: center;
-  width: 38px;
-  height: 38px;
+.brand-logo-frame {
+  display: inline-flex;
+  flex: 0 0 auto;
+  width: 46px;
+  height: 46px;
+  overflow: hidden;
   border: 1px solid rgba(198, 161, 91, 0.7);
-  border-radius: var(--radius);
-  background: linear-gradient(135deg, var(--emerald), var(--emerald-dark));
-  color: var(--white);
-  font-size: 0.73rem;
+  border-radius: 10px;
+  background: var(--charcoal);
+  box-shadow: 0 10px 22px rgba(21, 26, 24, 0.12);
+}
+
+.brand-logo-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.brand-name {
+  display: inline-block;
 }
 
 .nav-menu {
@@ -805,8 +816,18 @@ textarea.is-invalid,
   gap: 46px;
 }
 
-.footer-brand {
-  color: var(--white);
+.footer-logo-link {
+  display: inline-block;
+  width: min(100%, 330px);
+  overflow: hidden;
+  border: 1px solid rgba(198, 161, 91, 0.18);
+  border-radius: var(--radius);
+  background: var(--charcoal);
+}
+
+.footer-logo {
+  width: 100%;
+  height: auto;
 }
 
 .site-footer p {
@@ -1058,9 +1079,10 @@ textarea.is-invalid,
     font-size: 0.95rem;
   }
 
-  .brand-symbol {
+  .brand-logo-frame {
     width: 34px;
     height: 34px;
+    border-radius: 8px;
   }
 
   .hero-content h1 {
