@@ -1,8 +1,6 @@
 const header = document.querySelector("[data-header]");
 const navToggle = document.querySelector("[data-nav-toggle]");
 const navMenu = document.querySelector("[data-nav-menu]");
-const contactForm = document.querySelector("[data-contact-form]");
-const formStatus = document.querySelector("[data-form-status]");
 const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
 
 const closeNavigation = () => {
@@ -82,31 +80,6 @@ if (reduceMotion.matches) {
 
   revealElements.forEach((element) => revealObserver.observe(element));
 }
-
-const roleButtons = document.querySelectorAll("[data-select-role]");
-
-roleButtons.forEach((button) => {
-  button.addEventListener("click", () => {
-    const role = button.dataset.selectRole;
-    const radio = contactForm?.querySelector(`input[name="role"][value="${role}"]`);
-
-    if (radio) {
-      radio.checked = true;
-      clearRoleError();
-    }
-  });
-});
-
-const showFieldError = (field, message) => {
-  const error = document.getElementById(`${field.id}-error`);
-
-  field.classList.add("is-invalid");
-  field.setAttribute("aria-invalid", "true");
-
-  if (error) {
-    error.textContent = message;
-  }
-};
 
 const clearFieldError = (field) => {
   const error = document.getElementById(`${field.id}-error`);
