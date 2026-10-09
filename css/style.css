@@ -311,7 +311,7 @@ button {
   gap: 56px;
 }
 
-.hero-grid > * {
+.hero-grid>* {
   min-width: 0;
 }
 
@@ -349,19 +349,19 @@ button {
   filter: drop-shadow(0 26px 42px rgba(21, 26, 24, 0.08));
 }
 
-.hero-sequence > * {
+.hero-sequence>* {
   animation: heroRise 700ms ease both;
 }
 
-.hero-sequence > *:nth-child(2) {
+.hero-sequence>*:nth-child(2) {
   animation-delay: 90ms;
 }
 
-.hero-sequence > *:nth-child(3) {
+.hero-sequence>*:nth-child(3) {
   animation-delay: 180ms;
 }
 
-.hero-sequence > *:nth-child(4) {
+.hero-sequence>*:nth-child(4) {
   animation-delay: 270ms;
 }
 
@@ -539,6 +539,214 @@ button {
   margin-bottom: 0;
   color: var(--gold);
 }
+
+
+/* ===== Halal Marketing Guidelines ===== */
+
+.guidelines-section {
+  padding: 100px 24px;
+  background: var(--off-white, #F7F8F6);
+  color: var(--charcoal, #151A18);
+}
+
+.guidelines-container {
+  width: 100%;
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+.guidelines-header {
+  max-width: 760px;
+  margin: 0 auto 52px;
+  text-align: center;
+}
+
+.guidelines-eyebrow {
+  display: inline-block;
+  margin-bottom: 18px;
+  color: var(--emerald, #087A5B);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.guidelines-header h2 {
+  margin: 0;
+  font-family: "DM Serif Display", Georgia, serif;
+  font-size: clamp(2.2rem, 4.5vw, 3.6rem);
+  font-weight: 400;
+  line-height: 1.12;
+  letter-spacing: -0.025em;
+}
+
+.guidelines-header h2 span {
+  display: block;
+  color: var(--emerald, #087A5B);
+}
+
+.guidelines-header>p {
+  max-width: 680px;
+  margin: 22px auto 0;
+  color: var(--muted, #6B736F);
+  font-size: 1rem;
+  line-height: 1.85;
+}
+
+.guidelines-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.guideline-card {
+  padding: 30px 26px;
+  background: var(--white, #FFFFFF);
+  border: 1px solid var(--border, #E4E8E5);
+  border-radius: 14px;
+  transition:
+    transform 220ms ease,
+    border-color 220ms ease,
+    box-shadow 220ms ease;
+}
+
+.guideline-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--gold, #C6A15B);
+  box-shadow: 0 14px 35px rgba(21, 26, 24, 0.06);
+}
+
+.guideline-number {
+  display: inline-block;
+  margin-bottom: 22px;
+  color: var(--gold, #C6A15B);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+
+.guideline-card h3 {
+  margin: 0;
+  color: var(--charcoal, #151A18);
+  font-size: 1.15rem;
+  font-weight: 700;
+  line-height: 1.45;
+}
+
+.guideline-card p {
+  margin: 13px 0 0;
+  color: var(--muted, #6B736F);
+  font-size: 0.94rem;
+  line-height: 1.8;
+}
+
+.guidelines-footer {
+  margin-top: 38px;
+  padding: 30px;
+  border: 1px solid rgba(198, 161, 91, 0.4);
+  border-radius: 14px;
+  background: var(--white, #FFFFFF);
+  text-align: center;
+}
+
+.guidelines-footer>p {
+  margin: 0 0 16px;
+  color: var(--charcoal, #151A18);
+  font-size: 1.05rem;
+  font-weight: 600;
+  line-height: 1.7;
+}
+
+.guidelines-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  color: var(--emerald, #087A5B);
+  font-size: 0.95rem;
+  font-weight: 700;
+  line-height: 1.6;
+  text-decoration: none;
+}
+
+.guidelines-cta span {
+  color: var(--gold, #C6A15B);
+  transition: transform 200ms ease;
+}
+
+.guidelines-cta:hover span {
+  transform: translateX(5px);
+}
+
+.guidelines-cta:focus-visible {
+  outline: 2px solid var(--emerald, #087A5B);
+  outline-offset: 5px;
+  border-radius: 2px;
+}
+
+@media (max-width: 900px) {
+  .guidelines-section {
+    padding: 80px 22px;
+  }
+
+  .guidelines-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .guidelines-section {
+    padding: 64px 18px;
+  }
+
+  .guidelines-header {
+    margin-bottom: 34px;
+  }
+
+  .guidelines-header h2 {
+    font-size: 2.25rem;
+  }
+
+  .guidelines-header>p {
+    font-size: 0.95rem;
+    line-height: 1.75;
+  }
+
+  .guidelines-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .guideline-card {
+    padding: 25px 22px;
+  }
+
+  .guideline-number {
+    margin-bottom: 15px;
+  }
+
+  .guidelines-footer {
+    margin-top: 24px;
+    padding: 24px 18px;
+  }
+
+  .guidelines-cta {
+    align-items: flex-start;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+  .guideline-card,
+  .guidelines-cta span {
+    transition: none;
+  }
+
+  .guideline-card:hover {
+    transform: none;
+  }
+}
+
 
 .service-card {
   min-height: 318px;
@@ -720,6 +928,7 @@ button {
   margin-top: 26px;
 }
 
+
 .site-footer {
   padding: 64px 0 26px;
   background: var(--charcoal);
@@ -806,6 +1015,7 @@ button {
     opacity: 0;
     transform: translateY(20px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -813,6 +1023,7 @@ button {
 }
 
 @media (max-width: 1060px) {
+
   .hero-grid,
   .contact-grid,
   .why-grid {
@@ -1059,6 +1270,7 @@ button {
 }
 
 @media (prefers-reduced-motion: reduce) {
+
   *,
   *::before,
   *::after {
@@ -1069,7 +1281,7 @@ button {
   }
 
   .reveal,
-  .hero-sequence > * {
+  .hero-sequence>* {
     opacity: 1;
     transform: none;
   }
